@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-do list JS</title>
+    <script src="jmain.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .task {
+            position: absolute;
+            width: 30%;
+            height: 70vh;
+            /* background-color: rgb(222, 83, 83); */
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+        }
+
+        .container .block-input {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .block-input #task-input {
+            width: 80%;
+            height: 30px;
+            border: none;
+            border: 1px solid brown;
+            outline: none;
+            padding: 0 5px;
+            font-size: 19px;
+        }
+
+        .container .block-input #add-task {
+            width: 20%;
+            height: 32px;
+            margin-left: 10px;
+            border: none;
+            background-color: brown;
+            color: beige;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .container .task-list {
+            margin-top: 5px;
+        }
+
+        .container .task-list .task-item {
+            list-style: none;
+            background-color: rgba(216, 215, 215, 0.629);
+            padding: 7px 10px;
+            margin: 5px 0 5px 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container .task-list .task-item .remove-task {
+            background-color: brown;
+            border: none;
+            color: white;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="task">
+            <center>
+                <h1>My to-do list App</h1>
+            </center>
+            <div class="block-input">
+                <input type="text" id="task-input" placeholder="Add your task">
+                <button id="add-task">Add</button>
+            </div>
+
+
+
+            <button id="remove-checked">Supp</button>
+            
+            <div class="task-list">
+                <p class="task-item"> <input type="checkbox"> Jouer au basket <button
+                        class="remove-task">&cross;</button></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
